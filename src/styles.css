@@ -1,4 +1,30 @@
 .App {
   font-family: sans-serif;
+  overflow-x: hidden;
   text-align: center;
+  background-color: beige;
+  height: 100vh;
+}
+ul {
+  margin-top: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(256,256,256,1) 0%, rgb(30, 204, 178) 50%, rgba(256,256,256,1) 100%);
+}
+ul > li {
+  list-style-type: none;
+  margin-right:3px;
+  padding:5px 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.setUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
 }

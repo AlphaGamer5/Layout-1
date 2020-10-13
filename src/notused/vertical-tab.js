@@ -6,7 +6,7 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import styled from "styled-components";
-import { Container, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Info, Reorder, School, ExitToApp } from "@material-ui/icons";
 
 function TabPanel(props) {
@@ -72,13 +72,14 @@ export default function VerticalTabs() {
         <Grid
           item
           xs={12}
+          lg={4}
           style={{
             background:
               "linear-gradient(90deg, rgba(76,209,165,0.6870098381149334) 0%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%)"
           }}>
           <Tabs
             onClick={handleClick}
-            orientation="horizontal"
+            orientation="vertical"
             variant="scrollable"
             value={value}
             onChange={handleChange}

@@ -1,11 +1,11 @@
 import React from "react";
 import "./styles.css";
-import VerticalTabs from "./components/vertical-tab"
+import Drawer from "./components/drawer"
 
 export default function App() {
   return (
     <div className="App">
-      <VerticalTabs/>
+      <Drawer className='Draw'/>
     </div>
   );
 }
