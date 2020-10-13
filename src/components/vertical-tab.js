@@ -53,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const responsive = () => {};
+
 export default function VerticalTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -60,26 +62,26 @@ export default function VerticalTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const handleClick = (e) => {};
+  const handleClick = (e) => {
+    e.target.backgroundColor = "blue";
+  };
 
   return (
     <div className={classes.root}>
       <Grid container justify="center" alignItems="center">
         <Grid
           item
-          xs={4}
+          xs={12}
           style={{
-            background: "rgb(2,0,36)",
             background:
               "linear-gradient(90deg, rgba(76,209,165,0.6870098381149334) 0%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%)"
           }}>
           <Tabs
             onClick={handleClick}
-            orientation="vertical"
+            orientation="horizontal"
             variant="scrollable"
             value={value}
             onChange={handleChange}
-            aria-label="Vertical tabs example"
             className={classes.tabs}>
             <Tab icon={<Info />} label="About" {...a11yProps(0)} />
             <Tab icon={<Reorder />} label="Rules" {...a11yProps(1)} />
@@ -93,9 +95,8 @@ export default function VerticalTabs() {
         </Grid>
         <Grid
           item
-          xs={8}
+          xs={12}
           style={{
-            background: "rgb(2,0,36)",
             background:
               " linear-gradient(0deg, rgba(34,193,195,1) 70%, rgba(58,45,253,1) 150%)"
           }}>
