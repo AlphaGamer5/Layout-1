@@ -16,14 +16,13 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Grid } from "@material-ui/core";
 import styled from "styled-components";
+import about from "./about";
 
-const Div = styled.div`
-
-`;
+const Div = styled.div``;
 
 const routes = [
   {
-    path: "/",
+    path: "/about",
     exact: true,
     sidebar: () => <div></div>,
     main: () => <h2>About</h2>
@@ -89,7 +88,7 @@ function ResponsiveDrawer() {
       <Div>
         <ul className={classes.drawer}>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/rules">Rules</Link>

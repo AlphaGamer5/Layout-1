@@ -1,11 +1,12 @@
 import React from "react";
-import "./styles.css";
-import Drawer from "./components/drawer"
+// import "./styles.css";
+
+import Dashboard from "./components/about";
 
 export default function App() {
   return (
     <div className="App">
-      <Drawer className='Draw'/>
+      <Dashboard className="Draw" />
     </div>
   );
 }
